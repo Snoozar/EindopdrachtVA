@@ -369,7 +369,7 @@ response = requests.request("GET", url, headers=headers)
 
 
 test =  response.json()
-test
+print(test)
 
 
 # In[42]:
