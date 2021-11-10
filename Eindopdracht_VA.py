@@ -513,7 +513,7 @@ st.set_page_config(page_title = 'VA Eindopdracht', layout = 'wide')
 st.title("Dashboard over levensverwachting, toegang tot drinkwater en coronagevallen wereldwijd")
 st.markdown('Kim Nap (xxxxxxxxx) en Vincent Kemme (500838439)')
 
->>> genre = st.radio(
+genre = st.radio(
     "What's your favorite movie genre",
     ('Comedy', 'Drama', 'Documentary'))
 
