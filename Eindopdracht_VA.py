@@ -517,7 +517,7 @@ from streamlit_folium import folium_static
 
 st.set_page_config(page_title = 'VA Eindopdracht', layout = 'wide')
 st.title("Dashboard over levensverwachting, toegang tot drinkwater en coronagevallen wereldwijd")
-st.markdown('Kim Nap (xxxxxxxxx) en Vincent Kemme (500838439)')
+st.markdown('Kim Nap (500830599) en Vincent Kemme (500838439)')
 
 
 add_selectbox = st.sidebar.selectbox(
