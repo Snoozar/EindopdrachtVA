@@ -523,7 +523,7 @@ add_selectbox = st.sidebar.selectbox(
     ("Hoofdpagina", "Regressie")
 )
 
-if add_selectbox = "Hoofdpagina"
+if add_selectbox == "Hoofdpagina"
   st.markdown("Hoofdpagina")
 
 elif add_selectbox == "Regressie":
