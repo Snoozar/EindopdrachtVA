@@ -517,24 +517,34 @@ st.set_page_config(page_title = 'VA Eindopdracht', layout = 'wide')
 st.title("Dashboard over levensverwachting, toegang tot drinkwater en coronagevallen wereldwijd")
 st.markdown('Kim Nap (xxxxxxxxx) en Vincent Kemme (500838439)')
 
-lijnen = st.sidebar.radio(
-         "Regressielijnen tonen?",
-         ('Tonen', 'Niet tonen'))
-     
-# lijnen = st.radio(
-#     "Regressielijnen tonen?",
-#     ('Tonen', 'Niet tonen'))  
-col1, col2= st.columns(2)
-with col1:
-    if lijnen == 'Tonen':
-        st.plotly_chart(fig4)
-    else:
-        st.plotly_chart(fig5)
-with col2:
-    if lijnen == 'Tonen':
-        st.plotly_chart(fig6)
-    else:
-        st.plotly_chart(fig7)     
+
+add_selectbox = st.sidebar.selectbox(
+    "Wat wil je zien?",
+    ("Hoofdpagina", "Regressie")
+)
+
+if add_selectbox = "Hoofdpagina"
+  st.markdown("Hoofdpagina")
+
+elif add_selectbox == "Regressie":
+  lijnen = st.sidebar.radio(
+           "Regressielijnen tonen?",
+           ('Tonen', 'Niet tonen'))
+
+  # lijnen = st.radio(
+  #     "Regressielijnen tonen?",
+  #     ('Tonen', 'Niet tonen'))  
+  col1, col2= st.columns(2)
+  with col1:
+      if lijnen == 'Tonen':
+          st.plotly_chart(fig4)
+      else:
+          st.plotly_chart(fig5)
+  with col2:
+      if lijnen == 'Tonen':
+          st.plotly_chart(fig6)
+      else:
+          st.plotly_chart(fig7)     
       
       
 # if lijnen == 'Tonen':
