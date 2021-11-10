@@ -320,7 +320,9 @@ fig3 = px.choropleth(gdf, locations='ISO_A3', color='First Tooltip',
                            range_color=(0, 100),
                            labels={'First Tooltip':'Percentage'},
                            hover_name="Location",
-                           animation_frame = "Period")
+                           animation_frame = "Period",
+                           height = 800,
+                           width = 1200)
 
 fig3.update_layout(title = "Percentage van de bevolking dat toegang heeft tot schoon drinkwater; 2000 - 2017")
 fig3.show()
