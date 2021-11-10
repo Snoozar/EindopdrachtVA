@@ -508,3 +508,17 @@ fig7.update_layout(title = 'Coronagevallen per land tegenover toegang tot schoon
 
 fig7.show()
 
+## Streamlit code hieronder
+st.set_page_config(page_title = 'VA Eindopdracht', layout = 'wide')
+st.title("Dashboard over levensverwachting, toegang tot drinkwater en coronagevallen wereldwijd")
+st.markdown('Kim Nap (xxxxxxxxx) en Vincent Kemme (500838439)')
+
+>>> genre = st.radio(
+    "What's your favorite movie genre",
+    ('Comedy', 'Drama', 'Documentary'))
+
+if genre == 'Comedy':
+    st.write('You selected comedy.')
+else:
+    st.write("You didn't select comedy.")
+
