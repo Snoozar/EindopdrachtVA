@@ -517,15 +517,28 @@ st.set_page_config(page_title = 'VA Eindopdracht', layout = 'wide')
 st.title("Dashboard over levensverwachting, toegang tot drinkwater en coronagevallen wereldwijd")
 st.markdown('Kim Nap (xxxxxxxxx) en Vincent Kemme (500838439)')
 
-genre = st.radio(
-    "What's your favorite movie genre",
-    ('Comedy', 'Drama', 'Documentary'))
-
 add_selectbox = st.sidebar.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone")
+    lijnen = st.radio(
+        "Regressielijnen tonen?",
+        ('Tonen', 'Niet tonen))
 )
-if genre == 'Comedy':
+      
+col1, col2, col3 = st.columns(3)
+with col1:
+    if lijnen == 'Tonen':
+      st.plotly_chart(fig4)
+    else:
+      st.plotly_chart(fig5)
+with col2:
+    if lijnen == 'Tonen':
+      st.plotly_chart(fig6)
+    else:
+      st.plotly_chart(fig7)     
+with col3:
+    st.markdown("Datasets")
+      
+      
+if lijnen == 'Tonen':
     st.write('You selected comedy.')
 else:
     st.write("You didn't select comedy.") 
