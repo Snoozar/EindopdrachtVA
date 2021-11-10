@@ -523,19 +523,19 @@ add_selectbox = st.sidebar.selectbox(
         ('Tonen', 'Niet tonen'))
 )
       
-col1, col2, col3 = st.columns(3)
-with col1:
-    if lijnen == 'Tonen':
-        st.plotly_chart(fig4)
-    else:
-        st.plotly_chart(fig5)
-with col2:
-    if lijnen == 'Tonen':
-        st.plotly_chart(fig6)
-    else:
-        st.plotly_chart(fig7)     
-with col3:
-    st.markdown("Datasets")
+# col1, col2, col3 = st.columns(3)
+# with col1:
+#     if lijnen == 'Tonen':
+#         st.plotly_chart(fig4)
+#     else:
+#         st.plotly_chart(fig5)
+# with col2:
+#     if lijnen == 'Tonen':
+#         st.plotly_chart(fig6)
+#     else:
+#         st.plotly_chart(fig7)     
+# with col3:
+#     st.markdown("Datasets")
       
       
 if lijnen == 'Tonen':
