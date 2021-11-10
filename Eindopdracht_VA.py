@@ -520,8 +520,7 @@ st.markdown('Kim Nap (xxxxxxxxx) en Vincent Kemme (500838439)')
 add_selectbox = st.sidebar.selectbox(
     lijnen = st.radio(
         "Regressielijnen tonen?",
-        ('Tonen', 'Niet tonen')
-    )
+        ('Tonen', 'Niet tonen'))
 )
       
 col1, col2, col3 = st.columns(3)
