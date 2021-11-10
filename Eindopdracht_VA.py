@@ -520,12 +520,29 @@ st.markdown('Kim Nap (xxxxxxxxx) en Vincent Kemme (500838439)')
 
 add_selectbox = st.sidebar.selectbox(
     "Wat wil je zien?",
-    ("Hoofdpagina", "Regressie")
+    ("Levensverwachting en Drinkwater", "Kaart", "Regressie")
 )
 
-if add_selectbox == "Hoofdpagina":
-  st.markdown("Hoofdpagina")
+if add_selectbox == "Levensverwachting en Drinkwater":
+  col1, col2= st.columns(2)
+  with col1:
+      st.plotly_chart(hist1)
 
+  with col2:
+      st.plotly_chart(box1)
+
+  col3, col4= st.columns(2)
+  with col1:
+      st.plotly_chart(fig1)
+
+  with col2:
+      st.plotly_chart(fig2)
+      
+if add_selectbox == "Kaart":
+  st.plotly_chart(fig3)
+
+  
+  
 elif add_selectbox == "Regressie":
   lijnen = st.sidebar.radio(
            "Regressielijnen tonen?",
@@ -534,13 +551,13 @@ elif add_selectbox == "Regressie":
   # lijnen = st.radio(
   #     "Regressielijnen tonen?",
   #     ('Tonen', 'Niet tonen'))  
-  col1, col2= st.columns(2)
-  with col1:
+  col7, col8= st.columns(2)
+  with col7:
       if lijnen == 'Tonen':
           st.plotly_chart(fig4)
       else:
           st.plotly_chart(fig5)
-  with col2:
+  with col8:
       if lijnen == 'Tonen':
           st.plotly_chart(fig6)
       else:
