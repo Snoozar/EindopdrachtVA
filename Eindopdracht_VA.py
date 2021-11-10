@@ -538,8 +538,8 @@ add_selectbox = st.sidebar.selectbox(
 #     st.markdown("Datasets")
       
       
-if lijnen == 'Tonen':
-    st.write('You selected comedy.')
-else:
-    st.write("You didn't select comedy.") 
+# if lijnen == 'Tonen':
+#     st.write('You selected comedy.')
+# else:
+#     st.write("You didn't select comedy.") 
 
