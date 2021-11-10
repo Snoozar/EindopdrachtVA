@@ -517,15 +517,13 @@ st.set_page_config(page_title = 'VA Eindopdracht', layout = 'wide')
 st.title("Dashboard over levensverwachting, toegang tot drinkwater en coronagevallen wereldwijd")
 st.markdown('Kim Nap (xxxxxxxxx) en Vincent Kemme (500838439)')
 
-add_selectbox = st.sidebar.selectbox(
-#     lijnen = st.radio(
-#         "Regressielijnen tonen?",
-#         ('Tonen', 'Niet tonen'))
-)
+lijnen = st.sidebar.radio(
+         "Regressielijnen tonen?",
+         ('Tonen', 'Niet tonen'))
      
-lijnen = st.radio(
-    "Regressielijnen tonen?",
-    ('Tonen', 'Niet tonen'))  
+# lijnen = st.radio(
+#     "Regressielijnen tonen?",
+#     ('Tonen', 'Niet tonen'))  
 # col1, col2, col3 = st.columns(3)
 # with col1:
 #     if lijnen == 'Tonen':
