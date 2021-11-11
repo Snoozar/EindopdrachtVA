@@ -522,7 +522,7 @@ st.markdown('Kim Nap (500830599) en Vincent Kemme (500838439)')
 
 add_selectbox = st.sidebar.selectbox(
     "Wat wil je zien?",
-    ("Levensverwachting en Drinkwater", "Kaart", "Regressie")
+    ("Levensverwachting en Drinkwater", "Kaart over toegang tot drinkwater", "Regressie")
 )
 
 if add_selectbox == "Levensverwachting en Drinkwater":
@@ -540,9 +540,14 @@ if add_selectbox == "Levensverwachting en Drinkwater":
   with col2:
       st.plotly_chart(fig2)
       
-if add_selectbox == "Kaart":
+if add_selectbox == "Kaart over toegang tot drinkwater":
   st.plotly_chart(fig3)
-
+  st.markdown('''
+  Door het afspelen van de animatie van deze kaart is te zien dat het percentage van de wereld wat toegang heeft tot 
+  drinkwater door de jaren heen hoger wordt. Wereldwijd verhoogt het van gemiddeld 73.7% naar 82.6%, maar kijkend
+  naar bijvoorbeeld Zuid-Amerika zien we dat de landen daar vaak nog veel meer dan 9% meer toegang tot drinkwater
+  hebben. Over enkele landen is geen data, deze zijn lichtgrijs gelaten.
+  ''')
   
   
 elif add_selectbox == "Regressie":
