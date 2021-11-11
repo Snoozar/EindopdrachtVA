@@ -522,7 +522,7 @@ st.markdown('Kim Nap (500830599) en Vincent Kemme (500838439)')
 
 add_selectbox = st.sidebar.selectbox(
     "Wat wil je zien?",
-    ("Levensverwachting en drinkwater", "Kaart over toegang tot drinkwater", "Regressie")
+    ("Levensverwachting en drinkwater", "Kaart over toegang tot drinkwater", "Regressie en bronnen")
 )
 
 if add_selectbox == "Levensverwachting en drinkwater":
@@ -574,7 +574,7 @@ if add_selectbox == "Kaart over toegang tot drinkwater":
   ''')
   
   
-elif add_selectbox == "Regressie":
+elif add_selectbox == "Regressie en bronnen":
   st.header("Regressies over levensverwachting en coronagevallen tegenover toegang tot schoon drinkwater") 
   lijnen = st.sidebar.radio(
            "Regressielijnen tonen?",
@@ -606,6 +606,17 @@ elif add_selectbox == "Regressie":
       tot schoon drinkwater meer coronagevallen hebben, bijvoorbeeld: De mensen wonen dichter bij elkaar, er is meer infrastructuur 
       om te testen dus er wordt meer getest of er is meer internationale uitwisseling in deze landen waardoor het virus zich makkelijker verspreidt.
       ''')
-      
-      
+  
+  st.header("Bronnen") 
+    
+  st.markdown('''
+  Toegang tot water dataset: 
+  https://www.kaggle.com/utkarshxy/who-worldhealth-statistics-2020-complete?select=basicDrinkingWaterServices.csv
+  
+  Levensverwachting dataset: 
+  https://www.kaggle.com/utkarshxy/who-worldhealth-statistics-2020-complete?select=lifeExpectancyAtBirth.csv
+  
+  Covid dataset:
+  https://rapidapi.com/api-sports/api/covid-193/
+  '''
 
