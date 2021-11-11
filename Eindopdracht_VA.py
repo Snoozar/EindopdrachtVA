@@ -618,5 +618,5 @@ elif add_selectbox == "Regressie en bronnen":
   
   Covid dataset:
   https://rapidapi.com/api-sports/api/covid-193/
-  '''
+  ''')
 
