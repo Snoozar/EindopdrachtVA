@@ -600,8 +600,11 @@ elif add_selectbox == "Regressie":
           st.plotly_chart(fig7)     
       st.markdown('''
       Dit is het aantal geregistreerde coronagevallen per 1 miljoen inwoners per land, tegenover het percentage van de bevolking wat
-      toegang heeft tot schoon drinkwater. Opvallend genoeg zegt dit plaatje met een R-kwadraat van 0,31 dat je met de ene variabele
-      de andere kan voorspellen. 
+      toegang heeft tot schoon drinkwater. Opvallend genoeg zegt dit plaatje met een R-kwadraat van 0,31 dat toegang tot schoon drinkwater
+      correlatie heeft met het aantal coronagevallen in dat land. We hadden dit eigenlijk precies andersom verwacht, dat landen met 
+      schoon drinkwater gezondere mensen hadden. Het zou door verschillende redenen kunnen komen dat het zo is dat landen met toegang 
+      tot schoon drinkwater meer coronagevallen hebben, bijvoorbeeld: De mensen wonen dichter bij elkaar, er is meer infrastructuur 
+      om te testen of er is meer internationale uitwisseling in deze landen waardoor het virus zich makkelijker verspreidt.
       ''')
       
       
