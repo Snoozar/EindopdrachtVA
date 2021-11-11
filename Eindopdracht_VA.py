@@ -522,10 +522,11 @@ st.markdown('Kim Nap (500830599) en Vincent Kemme (500838439)')
 
 add_selectbox = st.sidebar.selectbox(
     "Wat wil je zien?",
-    ("Levensverwachting en Drinkwater", "Kaart over toegang tot drinkwater", "Regressie")
+    ("Levensverwachting en drinkwater", "Kaart over toegang tot drinkwater", "Regressie")
 )
 
-if add_selectbox == "Levensverwachting en Drinkwater":
+if add_selectbox == "Levensverwachting en drinkwater":
+  st.header("Informatie over de levensverwachting en de toegang tot drinkwater in verschillende landen")
   col1, col2= st.columns(2)
   with col1:
       st.plotly_chart(hist1)
@@ -541,6 +542,7 @@ if add_selectbox == "Levensverwachting en Drinkwater":
       st.plotly_chart(fig2)
       
 if add_selectbox == "Kaart over toegang tot drinkwater":
+  st.header("Een kaart over de toegang tot drinkwater per land")
   st.plotly_chart(fig3)
   st.markdown('''
   Door het afspelen van de animatie van deze kaart is te zien dat het percentage van de wereld wat toegang heeft tot 
@@ -551,13 +553,12 @@ if add_selectbox == "Kaart over toegang tot drinkwater":
   
   
 elif add_selectbox == "Regressie":
+  st.header("Regressies over levensverwachting en coronagevallen tegenover toegang tot schoon drinkwater") 
   lijnen = st.sidebar.radio(
            "Regressielijnen tonen?",
            ('Tonen', 'Niet tonen'))
 
-  # lijnen = st.radio(
-  #     "Regressielijnen tonen?",
-  #     ('Tonen', 'Niet tonen'))  
+
   col7, col8= st.columns(2)
   with col7:
       if lijnen == 'Tonen':
@@ -571,8 +572,4 @@ elif add_selectbox == "Regressie":
           st.plotly_chart(fig7)     
       
       
-# if lijnen == 'Tonen':
-#     st.write('You selected comedy.')
-# else:
-#     st.write("You didn't select comedy.") 
 
