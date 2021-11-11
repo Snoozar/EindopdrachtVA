@@ -530,9 +530,22 @@ if add_selectbox == "Levensverwachting en drinkwater":
   col1, col2= st.columns(2)
   with col1:
       st.plotly_chart(hist1)
+      st.markdown('''
+      In dit histogram van de levensverwachting per geslacht per land is te zien dat de meest voorkomende levensverwachting 74 is,
+      maar dat hij ook een stuk lager uit kan vallen. Zo zien we helemaal links bij 27-jaar-oud waar het histogram begint Haiti liggen.
+      Hier was in 2010 een grote natuurramp, waardoor zoveel mensen direct of indirect omgekomen zijn dat de levensverwachting 
+      ver onder de maat ligt. 
+      ''')
 
   with col2:
       st.plotly_chart(box1)
+      st.markdown('''
+      Hierboven is het percentage van de wereldbevolking met toegang tot drinkwater door de jaren heen te zien. We zien dat de IQR 
+      elk jaar net iets krimpt, en dat de mediaan ook door de jaren heen stijgt. Dit betekent dat over het algemeen het net wat beter 
+      gaat met de toegang tot drinkwater. Toch kan je zien dat het minumum vaak erg laag ligt, dus er zijn nog zeker gebieden waar
+      een hoop verbetering nodig is.
+      ''')
+
 
   col3, col4= st.columns(2)
   with col1:
@@ -540,7 +553,16 @@ if add_selectbox == "Levensverwachting en drinkwater":
 
   with col2:
       st.plotly_chart(fig2)
-      
+  
+  st.markdown('''
+  De vijf landen met de hoogste en laagste levensverwachting zijn hier op twee grafieken naast elkaar gezet om het verschil goed
+  in te kunnen beelden. Ze kunnen allebei los van elkaar ingesteld worden op geslacht, om zo alle waarden met elkaar te kunnen
+  vergelijken. De lijnen lijken gelukkig allemaal een stijgende trend te hebben, dus de levensverwachting gaat omhoog. Zoals 
+  ook bij het histogram hierboven te zien was is in 2010 Haiti weer een erg laag punt. Dit komt, nogmaals, door een 
+  natuurramp die dat jaar in Haiti voorkwam. Opvallend genoeg ligt de levensverwachting van vrouwen bij elk van deze 
+  landen hoger dan de levensverwachting van de mannen. 
+  ''')
+     
 if add_selectbox == "Kaart over toegang tot drinkwater":
   st.header("Een kaart over de toegang tot drinkwater per land")
   st.plotly_chart(fig3)
@@ -565,11 +587,22 @@ elif add_selectbox == "Regressie":
           st.plotly_chart(fig4)
       else:
           st.plotly_chart(fig5)
+      st.markdown('''
+      Hier is de levensverwachting ten opzichte van de toegang tot schoondrinkwater te zien. Met een R-kwadraat waarde van tussen
+      de 0,6 en de 0,7 bij alledrie de regressielijnen is te zien dat er een sterke correlatie lijkt te zijn tussen deze twee variabelen.
+      Omdat het per geslacht geplot is is ook te zijn dat de levensverwachting van mannen lager ligt dan de levensverwachting van vrouwen.
+      ''')
+
   with col8:
       if lijnen == 'Tonen':
           st.plotly_chart(fig6)
       else:
           st.plotly_chart(fig7)     
+      st.markdown('''
+      Dit is het aantal geregistreerde coronagevallen per 1 miljoen inwoners per land, tegenover het percentage van de bevolking wat
+      toegang heeft tot schoon drinkwater. Opvallend genoeg zegt dit plaatje met een R-kwadraat van 0,31 dat je met de ene variabele
+      de andere kan voorspellen. 
+      ''')
       
       
 
