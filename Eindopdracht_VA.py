@@ -604,7 +604,7 @@ elif add_selectbox == "Regressie":
       correlatie heeft met het aantal coronagevallen in dat land. We hadden dit eigenlijk precies andersom verwacht, dat landen met 
       schoon drinkwater gezondere mensen hadden. Het zou door verschillende redenen kunnen komen dat het zo is dat landen met toegang 
       tot schoon drinkwater meer coronagevallen hebben, bijvoorbeeld: De mensen wonen dichter bij elkaar, er is meer infrastructuur 
-      om te testen of er is meer internationale uitwisseling in deze landen waardoor het virus zich makkelijker verspreidt.
+      om te testen dus er wordt meer getest of er is meer internationale uitwisseling in deze landen waardoor het virus zich makkelijker verspreidt.
       ''')
       
       
