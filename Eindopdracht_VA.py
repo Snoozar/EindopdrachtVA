@@ -61,7 +61,7 @@ ann1 = {'x': 31, 'y':10, 'showarrow': False,
                     'font': {'color': 'black'}, 'text': "Haiti in 2010"}
 
 hist1 = px.histogram(df_life, x = "First Tooltip", 
-                   title = 'Levensverwachting',
+                   title = 'Levensverwachting van beide geslachten van alle jaren',
                    labels = {'First Tooltip': 'Levensverwachting'},)
 hist1.update_layout(yaxis_title = 'Hoeveelheid')
 hist1.update_layout({'annotations': [ann1]})
